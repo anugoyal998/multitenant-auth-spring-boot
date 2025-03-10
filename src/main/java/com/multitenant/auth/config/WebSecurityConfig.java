@@ -17,7 +17,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @EnableMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig {
-    private static final String[] publicRoutes = {"/organization/**", "/auth/signup"};
+    private static final String[] publicRoutes = {
+                "/organization/**", "/auth/**"
+            };
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
